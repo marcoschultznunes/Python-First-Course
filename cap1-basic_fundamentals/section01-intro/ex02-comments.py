@@ -1,3 +1,6 @@
 # Single Line Comment ( //, /**/ and /** */ don't work in python).
-# Python does not have multi-line comments.
-# Instead, you use multiple single-lines.
+
+"""
+Multi Line Comments in python
+are written like this.
+"""
