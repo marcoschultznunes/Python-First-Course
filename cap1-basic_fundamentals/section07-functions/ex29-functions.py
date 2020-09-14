@@ -12,7 +12,7 @@ def add(n1, n2):
 print(add(4, 8))
 br()
 
-# Multiple params
+# Multiple params => * receives a TUPLE collection of arguments
 def addition(*nums):
     res = 0
     for n in nums:
