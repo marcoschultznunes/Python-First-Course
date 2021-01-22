@@ -1,0 +1,25 @@
+Django documentation:
+    https://docs.djangoproject.com/
+
+The documentation recommends setting up a virtual environment for
+the project. This is the equivalent of package.json in JS, or the
+npm init command.
+
+This is so we can manage the dependencies inside the project.
+
+The module used to create and manage virtual environments is called 
+venv.
+
+===== CREATING THE VENV =====
+
+We'll use this venv module to create the virtual environment:
+    sudo apt install python3-virtualenv
+    virtualenv env => creates an env folder
+
+Them we activate (select) it:
+    source env/bin/activate
+
+While it is activated on the terminal we can install dependencies 
+to it.
+
+=> We must also gitignore the env folder

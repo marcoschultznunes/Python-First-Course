@@ -1,0 +1,3 @@
+The command to create a Django project:
+    django-admin startproject django_project
+

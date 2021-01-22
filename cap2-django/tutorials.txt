@@ -1,0 +1,4 @@
+First tutorial for this course:
+
+JustDjango's Getting Started With Django Tutorial // Build a CRM
+    https://www.youtube.com/watch?v=fOukA4Qh9QA

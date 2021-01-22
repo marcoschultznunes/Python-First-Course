@@ -1,0 +1,5 @@
+To manage our dependencies, the very equivalent of the package.json
+file for python is a file called 'requirements.txt'.
+
+The command to generate the 'requirements.txt' file
+    pip3 freeze > requirements.txt

@@ -1,0 +1,9 @@
+manage.py contains the main() of the application.
+    python manage.py runserver
+
+
+And to open it on the browser:
+    http://127.0.0.1:8000/
+
+
+Django already logs requests to the console by default.

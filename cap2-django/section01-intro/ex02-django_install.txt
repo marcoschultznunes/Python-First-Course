@@ -1,0 +1,3 @@
+Once the venv is activated:    
+    python -m pip install Django
+

@@ -1,0 +1,11 @@
+Django heavily uses migrations.
+
+The default Django database is SQLlite, but this can be changed 
+later. 
+
+
+Migration command:
+    python manage.py migrate
+
+
+This command will generate a db.sqlite3 binary file

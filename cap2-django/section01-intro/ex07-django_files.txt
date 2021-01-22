@@ -1,0 +1,10 @@
+Let's take a look at the files django created:
+
+    asgi.py => We mostly not touch it, but it's purpose is to run 
+    our server asynchrously
+
+    wsgi.py => Almost same as asgi.py
+
+    settings.py => The most important file, contains many project 
+    configurations, such as database connections, templates, 
+    secret key, etc.
