@@ -1,0 +1,7 @@
+There is an excellent admin tool built in on django which can be accessed with this URL:
+    http://127.0.0.1:8000/admin
+
+To enter, we need to create a superuser with the command
+    python manage.py createsuperuser
+
+Then, we enter the email and password and we can access the admin.

@@ -1,0 +1,5 @@
+Access sqlite3 on shell
+    python manage.py dbshell 
+
+Describe (create if not exists) table
+    .schema table_name
