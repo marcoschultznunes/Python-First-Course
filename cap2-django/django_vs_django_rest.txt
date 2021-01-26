@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/49109791/django-or-django-rest-framework
+
+Django is for MVC, Django rest framework is for REST and so is Flask. To work with graphql,
+use graphene library.

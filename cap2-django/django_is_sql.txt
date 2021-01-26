@@ -1,0 +1,8 @@
+https://www.reddit.com/r/Python/comments/38osar/flask_or_django_for_restful_api/
+
+"
+    On the other hand, Django brings more to the table, notably an ORM. You can then use Django 
+Rest Framework to expose the models through a REST API. 
+Note that the ORM is extremely oriented towards SQL databases though. "
+
+" Django is kind of an SQL-only-framework "
