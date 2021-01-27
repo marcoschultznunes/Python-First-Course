@@ -1,5 +1,5 @@
 """
-    We'll now add the first route to our API, which will return the message "Hello There".
+    We'll now add the first URL to our API, which will return the message "Hello There".
 
     For this, we'll need to add a view.
 """
@@ -13,7 +13,7 @@ def hello(req):
         'message': 'Hello There'
     }
 
-    return JsonResponse(res)
+    return JsonResponse(res, status=200)
 
 
 # urls.py

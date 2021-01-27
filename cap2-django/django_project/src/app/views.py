@@ -7,4 +7,4 @@ def hello(req):
         'message': 'Hello There'
     }
 
-    return JsonResponse(res)
+    return JsonResponse(res, status=200)
