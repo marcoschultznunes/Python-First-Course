@@ -1,0 +1,5 @@
+"Try to put logic into your models and not your view sets. I’ve worked on large code based 
+and I’ve never seen a case where using views is more useful than viewsets for writing DRF 
+endpoints."
+
+"I can't picture a case where a ViewSet won't be able to do something a View can"
