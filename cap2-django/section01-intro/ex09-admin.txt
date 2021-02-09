@@ -5,3 +5,7 @@ To enter, we need to create a superuser with the command
     python manage.py createsuperuser
 
 Then, we enter the email and password and we can access the admin.
+
+
+Also: we can change the password by running the command:
+    python manage.py changepassword marcola

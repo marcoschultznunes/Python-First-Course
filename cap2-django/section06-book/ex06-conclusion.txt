@@ -1,0 +1,2 @@
+As you can see, it is better to use viewsets. But, if you encounter some mong using the 
+bullshit generics shit, then you better know this shit so you don't get fucked.

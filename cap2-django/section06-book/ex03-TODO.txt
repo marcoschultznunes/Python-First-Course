@@ -1,0 +1,3 @@
+Image validation: size and extension
+Phone validation
+Actual upload of the images
