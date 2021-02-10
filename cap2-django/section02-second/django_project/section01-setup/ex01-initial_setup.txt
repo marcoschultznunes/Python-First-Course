@@ -1,0 +1,22 @@
+1 - Create env:
+    venv env
+
+2 - Gitignore env folder
+
+3 - Activate env:
+    source env/bin/activate
+
+4 - Install Django and Rest Framework to env:
+    pip install django
+    pip install djangorestframework
+
+5 - Make requirements.txt:
+    pip freeze > requirements.txt
+
+6 - Start Project:
+    django-admin startproject src
+
+7 - Test:
+    python manage.py runserver
+
+    http://127.0.0.1:8000/

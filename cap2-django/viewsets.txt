@@ -3,3 +3,4 @@ and I’ve never seen a case where using views is more useful than viewsets for 
 endpoints."
 
 "I can't picture a case where a ViewSet won't be able to do something a View can"
+
