@@ -1,0 +1,4 @@
+For the next few sections of Django, i'll be following the youtube channel called Very Academy.
+
+This section is based on Learn Django API playlist from Very Academy.
+    https://www.youtube.com/watch?v=RrVdko3Zgbw&list=PLOLrQ9Pn6cazAmRKf6t79uaaqJSgGcwRo
