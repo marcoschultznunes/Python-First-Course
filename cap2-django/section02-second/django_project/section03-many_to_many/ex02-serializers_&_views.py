@@ -39,6 +39,11 @@ class TagDetailsSerializer(serializers.HyperlinkedModelSerializer):
         model = Tag
         fields = ('id', 'name', 'posts')
 
+"""
+    Note: There is one problem with this serializer that we are not addressing yet, which is 
+    updating the post's tags. We will solve this in ex04.
+"""
+
 # views.py, using the details serializer
 from django.shortcuts import render
 from rest_framework import viewsets
