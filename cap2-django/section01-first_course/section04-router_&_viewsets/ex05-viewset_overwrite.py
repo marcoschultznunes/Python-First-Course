@@ -1,11 +1,13 @@
 """
     We can also overwrite the 5 default methods of the viewsets, in which case we don't need
-    decorators. Reminder of the 5 methods:
+    decorators. Reminder of the 5 methods and patch:
         list() = index
         retreive() = getById
         create() = post
         update() = update
         destroy() = delete
+
+        partial_update() = patch
 
     In this example, we'll overwrite list on the user viewset, ordering by name
 """

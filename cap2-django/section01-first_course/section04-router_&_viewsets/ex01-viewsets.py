@@ -35,7 +35,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 """
-    A viewset provides the 5 basic CRUD operations:
+    A viewset provides the 5 basic CRUD operations and the PATCH:
 
         list() = index
         retreive() = getById
@@ -43,11 +43,14 @@ class UserViewSet(viewsets.ModelViewSet):
         update() = update
         destroy() = delete
 
+        partial_update() = patch
+
     This means the viewset will provide the 5 routes automatically when added to the router:
         GET /users
         GET /users/:id
         POST /users
         PUT /users/:id
+        PATCH /users/:id
         DELETE /users/:id
 """
 

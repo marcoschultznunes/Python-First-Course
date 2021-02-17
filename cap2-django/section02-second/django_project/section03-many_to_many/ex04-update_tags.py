@@ -20,7 +20,9 @@ class PostUpdateSerializer(serializers.HyperlinkedModelSerializer):
 # On views.py
 class PostViewset(viewsets.ModelViewSet):
     def get_serializer_class(self):
-        if self.action == 'update':
+
+        # Note: partial_update for PATCH
+        if self.action == 'update' or self.action == 'partial_update':
             return PostUpdateSerializer
         else:
             return PostDetailsSerializer
@@ -31,16 +33,14 @@ class PostViewset(viewsets.ModelViewSet):
 """
     Now we can update the post by sending a JSON request, passing the tag ids on a 'tags' list:
 
-    PUT /blog/posts/1
+    PATCH /blog/posts/1
 
     {
-        "id": 1,
-        "url": "http://127.0.0.1:8000/blog/posts/1/",
-        "title": "What the fu?",
-        "content": "Q",
         "tags": [
             2,
             3
         ]
     }
+
+    Note: PATCH action is called partial_update in Django
 """

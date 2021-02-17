@@ -8,7 +8,7 @@ from .models import Post, Tag
 
 class PostViewset(viewsets.ModelViewSet):
     def get_serializer_class(self):
-        if self.action == 'update':
+        if self.action == 'update' or self.action == 'partial_update':
             return PostUpdateSerializer
         else:
             return PostDetailsSerializer

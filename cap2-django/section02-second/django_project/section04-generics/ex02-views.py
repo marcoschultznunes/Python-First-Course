@@ -15,15 +15,15 @@ class PostRetrieveView(generics.RetrieveAPIView):
     queryset = Post.objects.all().order_by('title')
     serializer_class = PostDetailsSerializer
 
-class PostCreateView(generics.CreateAPIView):
+class PostCreateView(generics.ListCreateAPIView):
     queryset = Post.objects.all().order_by('title')
     serializer_class = PostDetailsSerializer
 
-class PostUpdateView(generics.UpdateAPIView):
+class PostUpdateView(generics.RetrieveUpdateAPIView):
     queryset = Post.objects.all().order_by('title')
     serializer_class = PostUpdateSerializer
 
-class PostDestroyView(generics.DestroyAPIView):
+class PostDestroyView(generics.RetrieveDestroyAPIView):
     queryset = Post.objects.all().order_by('title')
     serializer_class = PostDetailsSerializer
 
@@ -36,14 +36,14 @@ class TagRetrieveView(generics.RetrieveAPIView):
     queryset = Tag.objects.all().order_by('name')
     serializer_class = TagDetailsSerializer
 
-class TagCreateView(generics.CreateAPIView):
+class TagCreateView(generics.ListCreateAPIView):
     queryset = Tag.objects.all().order_by('name')
     serializer_class = TagDetailsSerializer
 
-class TagUpdateView(generics.UpdateAPIView):
+class TagUpdateView(generics.RetrieveUpdateAPIView):
     queryset = Tag.objects.all().order_by('name')
     serializer_class = TagDetailsSerializer
 
-class TagDestroyView(generics.DestroyAPIView):
+class TagDestroyView(generics.RetrieveDestroyAPIView):
     queryset = Tag.objects.all().order_by('name')
     serializer_class = TagDetailsSerializer

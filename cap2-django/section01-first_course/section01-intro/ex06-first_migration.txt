@@ -1,6 +1,6 @@
 Django heavily uses migrations.
 
-The default Django database is SQLlite, but this can be changed 
+The default Django database is SQLite, but this can be changed 
 later. 
 
 
