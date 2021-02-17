@@ -7,15 +7,13 @@ class PostUpdateView(generics.RetrieveUpdateAPIView):
 
     def patch(self, request, pk):
         post = get_object_or_404(Post, pk=pk) # imported from django.shortcuts
-        serializer = PostUpdateSerializer(
-            post, data=request.data, partial=True, context={'request': request}
-        )
+        serializer = PostUpdateSerializer(post, data=request.data, partial=True, context={'request': request})
 
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data)
+            return Response(serializer.data) # imported from rest_framework.response
 
-        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 """
     Note: You must send raw json data instead of using an html form to send a patch request.

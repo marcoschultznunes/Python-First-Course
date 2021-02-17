@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from posts.models import Post, Tag
 from posts.serializers import (
-    PostDetailsSerializer, PostListSerializer, PostUpdateSerializer, 
+    PostDetailsSerializer, PostListSerializer, PostSaveSerializer, 
     TagDetailsSerializer, TagListSerializer
 )
 
@@ -17,11 +17,11 @@ class PostRetrieveView(generics.RetrieveAPIView):
 
 class PostCreateView(generics.ListCreateAPIView):
     queryset = Post.objects.all().order_by('title')
-    serializer_class = PostDetailsSerializer
+    serializer_class = PostSaveSerializer
 
 class PostUpdateView(generics.RetrieveUpdateAPIView):
     queryset = Post.objects.all().order_by('title')
-    serializer_class = PostUpdateSerializer
+    serializer_class = PostSaveSerializer
 
 class PostDestroyView(generics.RetrieveDestroyAPIView):
     queryset = Post.objects.all().order_by('title')

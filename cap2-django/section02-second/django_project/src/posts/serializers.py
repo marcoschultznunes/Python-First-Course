@@ -33,8 +33,8 @@ class TagDetailsSerializer(serializers.HyperlinkedModelSerializer):
         model = Tag
         fields = ('id', 'name', 'posts')
 
-# Update
-class PostUpdateSerializer(serializers.HyperlinkedModelSerializer):
+# Update and create - many to many
+class PostSaveSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.ReadOnlyField
     tags = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(), many=True)
 

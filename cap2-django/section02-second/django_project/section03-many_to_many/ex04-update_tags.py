@@ -1,11 +1,11 @@
 """
-    The solution is to create a PostUpdateSerializer,
+    The solution is to create a PostSaveSerializer,
     and have it serialize the tags a list of ids with:
         tags = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(), many=True)
 """
 
 # On serializers.py
-class PostUpdateSerializer(serializers.HyperlinkedModelSerializer):
+class PostSaveSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.ReadOnlyField
     tags = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(), many=True)
 
@@ -22,8 +22,8 @@ class PostViewset(viewsets.ModelViewSet):
     def get_serializer_class(self):
 
         # Note: partial_update for PATCH
-        if self.action == 'update' or self.action == 'partial_update':
-            return PostUpdateSerializer
+        if self.action == 'update' or self.action == 'partial_update' or self.action == 'create':
+            return PostSaveSerializer
         else:
             return PostDetailsSerializer
 
@@ -31,7 +31,8 @@ class PostViewset(viewsets.ModelViewSet):
 
 
 """
-    Now we can update the post by sending a JSON request, passing the tag ids on a 'tags' list:
+    Now we can update and create posts by sending a JSON requests, passing the tag ids on a 
+    'tags' list:
 
     PATCH /blog/posts/1
 
