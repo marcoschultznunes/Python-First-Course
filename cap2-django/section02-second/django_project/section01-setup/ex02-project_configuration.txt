@@ -4,7 +4,7 @@
 2 - Create first app:
     python manage.py startapp posts
 
-3 - Add posts and rest_frameork to INSTALLED_APPS in settings.py:
+3 - Add posts and rest_framework to INSTALLED_APPS in settings.py:
     INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
