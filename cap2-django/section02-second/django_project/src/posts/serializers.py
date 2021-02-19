@@ -7,7 +7,7 @@ class PostListSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'url', 'title', 'content', 'image')
+        fields = ('id', 'url', 'title', 'content', 'image', 'created_at', 'updated_at')
 
 class TagListSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.ReadOnlyField
@@ -23,7 +23,7 @@ class PostDetailsSerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta: 
         model = Post
-        fields = ('id', 'url', 'title', 'content', 'image', 'tags')
+        fields = ('id', 'url', 'title', 'content', 'image', 'tags', 'created_at', 'updated_at')
 
 class TagDetailsSerializer(serializers.HyperlinkedModelSerializer):
     id = serializers.ReadOnlyField

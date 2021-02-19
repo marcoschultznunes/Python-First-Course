@@ -5,6 +5,7 @@ from uuid import uuid4
 import time;
 
 # Validators
+
 def image_size(image):
     limit = 10 * 1024 * 1024
     if image.size > limit:
@@ -18,7 +19,9 @@ def upload_destination(instance, filename):
 
     return finalname
 
+
 # Models
+
 class Tag(models.Model):
     name = models.CharField(max_length=40, validators=[MinLengthValidator(2)])
 
@@ -41,6 +44,9 @@ class Post(models.Model):
     tags = models.ManyToManyField(
         "Tag", verbose_name=("posts_tags"), related_name='posts', blank=True
     )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name_plural = 'Posts'

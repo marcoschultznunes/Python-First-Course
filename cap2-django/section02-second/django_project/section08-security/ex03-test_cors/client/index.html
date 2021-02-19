@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Test</title>
+</head>
+<body>
+    
+    <h1 id='message'>Hello There</h1>
+
+    <!-- NOTE: 
+        Due to the script being inline, we must add "'unsafe-inline'" to CSP_SCRIPT_SRC
+        in Django settings.py
+    -->
+    <script>
+        fetch('http://127.0.0.1:8000/blog/posts/')
+            .then(res => res.json())
+            .then(data => console.log(data.results))
+    </script>
+</body>
+</html>
