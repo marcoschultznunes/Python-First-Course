@@ -9,7 +9,7 @@ cssselect==1.1.0
 d==0.2.2
 distlib==0.3.0
 distro==1.4.0
-Django==3.1.6
+Django==3.1.12
 django-cors-headers==3.7.0
 django-csp==3.7
 djangorestframework==3.12.2
